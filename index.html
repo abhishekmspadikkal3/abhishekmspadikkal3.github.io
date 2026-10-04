@@ -25,12 +25,16 @@
                 </ul>
             </nav>
             <div class="contact-info">
-                <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                <p>Email: <a href="mailto:abhims@imsc.res.in">abhims@imsc.res.in</a></p>
                 <p><a href="https://github.com/username">GitHub</a> | <a href="#">Google Scholar</a></p>
             </div>
         </aside>
         
         <main class="content">
+            <section id="simulation-section" style="margin-bottom: 40px; border-radius: 8px; overflow: hidden; position: relative;">
+                <canvas id="collision-canvas" style="display: block; width: 100%; background: #0a0f1e; cursor: pointer;"></canvas>
+                <div style="position: absolute; bottom: 10px; right: 10px; color: #fff; font-size: 0.8rem; font-family: 'Inter', sans-serif; opacity: 0.7;">Click to trigger collision</div>
+            </section>
             <section id="about">
                 <h2>About Me</h2>
                 <p>
@@ -42,7 +46,17 @@
                     [You can add more details about your specific research interests, what phenomena you are studying, and any collaborations you are part of here.]
                 </p>
             </section>
+            <section id="achievements">
+                <h2>Achievements</h2>
+                <ul class="item-list">
+                    <li>
+                        <p><strong>[Achievement Title]</strong></p>
+                        <p>Description of the achievement, award, or scholarship.</p>
+                    </li>
+                </ul>
+            </section>
         </main>
     </div>
+    <script src="assets/js/simulation.js"></script>
 </body>
 </html>
