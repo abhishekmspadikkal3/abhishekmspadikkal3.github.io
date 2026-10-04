@@ -31,9 +31,12 @@
         </aside>
         
         <main class="content">
-            <section id="simulation-section" style="margin-bottom: 40px; border-radius: 8px; overflow: hidden; position: relative;">
-                <canvas id="collision-canvas" style="display: block; width: 100%; background: #0a0f1e; cursor: pointer;"></canvas>
-                <div style="position: absolute; bottom: 10px; right: 10px; color: #fff; font-size: 0.8rem; font-family: 'Inter', sans-serif; opacity: 0.7;">Click to trigger collision</div>
+            <!-- Container with light grey background, golden ratio padding -->
+            <section id="simulation-wrapper" style="background: #f0f0f0; padding: 20px; border-radius: 8px; margin-bottom: 40px;">
+                <section id="simulation-section" style="border-radius: 4px; overflow: hidden; position: relative;">
+                    <canvas id="collision-canvas" style="display: block; width: 100%; cursor: pointer;"></canvas>
+                    <div style="position: absolute; bottom: 10px; right: 10px; color: #333; font-size: 0.8rem; font-family: 'Inter', sans-serif; opacity: 0.7;">Click to trigger collision</div>
+                </section>
             </section>
             <section id="about">
                 <h2>About Me</h2>
@@ -45,6 +48,13 @@
                     My research focuses on understanding the fundamental particles and forces of nature. 
                     [You can add more details about your specific research interests, what phenomena you are studying, and any collaborations you are part of here.]
                 </p>
+            </section>
+            <section id="feynman-section" style="background: #f0f0f0; padding: 20px; border-radius: 8px; margin-bottom: 40px; text-align: center;">
+                <h2>Random Feynman Diagrams</h2>
+                <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Inspired by <a href="https://web.physik.rwth-aachen.de/user/harlander/software/feyngame/" target="_blank">FeynGame</a>. Click the box to generate a new diagram.</p>
+                <div style="background: white; border-radius: 4px; overflow: hidden; border: 1px solid #ddd;">
+                    <canvas id="feynman-canvas" style="display: block; width: 100%; cursor: pointer;"></canvas>
+                </div>
             </section>
             <section id="achievements">
                 <h2>Achievements</h2>
@@ -58,5 +68,6 @@
         </main>
     </div>
     <script src="assets/js/simulation.js"></script>
+    <script src="assets/js/feynman.js"></script>
 </body>
 </html>
