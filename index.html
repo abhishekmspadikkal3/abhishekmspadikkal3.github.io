@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhishek MS</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=5">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -31,12 +31,22 @@
         </aside>
         
         <main class="content">
-            <!-- Container with light grey background, golden ratio padding -->
-            <section id="simulation-wrapper" style="background: #f0f0f0; padding: 20px; border-radius: 8px; margin-bottom: 40px;">
-                <section id="simulation-section" style="border-radius: 4px; overflow: hidden; position: relative;">
-                    <canvas id="collision-canvas" style="display: block; width: 100%; cursor: pointer;"></canvas>
-                    <div style="position: absolute; bottom: 10px; right: 10px; color: #333; font-size: 0.8rem; font-family: 'Inter', sans-serif; opacity: 0.7;">Click to trigger collision</div>
-                </section>
+            <!-- Hero visual: light-grey panel, split in the golden ratio (1.618 : 1) -->
+            <section class="hero-visual" aria-label="Particle physics visualisation">
+                <div class="hero-grid">
+                    <figure class="viz">
+                        <div class="viz-frame viz-frame--wide">
+                            <canvas id="collision-canvas"></canvas>
+                        </div>
+                        <figcaption>Simulated proton&ndash;proton collision</figcaption>
+                    </figure>
+                    <figure class="viz">
+                        <div class="viz-frame viz-frame--golden">
+                            <canvas id="feynman-canvas"></canvas>
+                        </div>
+                        <figcaption>Feynman diagrams, drawn in the spirit of <a href="https://web.physik.rwth-aachen.de/user/harlander/software/feyngame/" target="_blank" rel="noopener">FeynGame</a></figcaption>
+                    </figure>
+                </div>
             </section>
             <section id="about">
                 <h2>About Me</h2>
@@ -49,13 +59,6 @@
                     [You can add more details about your specific research interests, what phenomena you are studying, and any collaborations you are part of here.]
                 </p>
             </section>
-            <section id="feynman-section" style="background: #f0f0f0; padding: 20px; border-radius: 8px; margin-bottom: 40px; text-align: center;">
-                <h2>Random Feynman Diagrams</h2>
-                <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Inspired by <a href="https://web.physik.rwth-aachen.de/user/harlander/software/feyngame/" target="_blank">FeynGame</a>. Click the box to generate a new diagram.</p>
-                <div style="background: white; border-radius: 4px; overflow: hidden; border: 1px solid #ddd;">
-                    <canvas id="feynman-canvas" style="display: block; width: 100%; cursor: pointer;"></canvas>
-                </div>
-            </section>
             <section id="achievements">
                 <h2>Achievements</h2>
                 <ul class="item-list">
@@ -67,7 +70,7 @@
             </section>
         </main>
     </div>
-    <script src="assets/js/simulation.js"></script>
-    <script src="assets/js/feynman.js"></script>
+    <script src="assets/js/simulation.js?v=5"></script>
+    <script src="assets/js/feynman.js?v=5"></script>
 </body>
 </html>
